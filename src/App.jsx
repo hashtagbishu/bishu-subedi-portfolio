@@ -6,9 +6,11 @@ const greetings = ['Hello','नमस्ते','Hola','Bonjour','こんにち�
 
 export default function App(){
   const [showIntro,setShowIntro] = useState(true)
+  const [greetingIndex,setGreetingIndex] = useState(0)
   useEffect(()=>{
-    const timer = window.setTimeout(()=>setShowIntro(false), 8000)
-    return ()=>window.clearTimeout(timer)
+    const interval = window.setInterval(()=>setGreetingIndex(index => index < greetings.length - 1 ? index + 1 : index), 620)
+    const timer = window.setTimeout(()=>setShowIntro(false), 8200)
+    return ()=>{window.clearInterval(interval); window.clearTimeout(timer)}
   },[])
   const socials = [
     {name:'GitHub',url:profile.github,Icon:Code2},
@@ -31,7 +33,7 @@ export default function App(){
 
   return <div className="site-shell">
     {showIntro && <div className="intro-screen" aria-label="Welcome to the portfolio of Bishu Subedi">
-      <div className="intro-greeting-window"><div className="intro-greeting-track">{greetings.map(word=><span key={word}>{word}</span>)}</div></div>
+      <div className="intro-greeting-window"><span className="intro-greeting-word" key={greetingIndex}>{greetings[greetingIndex]}</span></div>
       <div className="intro-welcome"><span>WELCOME TO THE</span><strong>PORTFOLIO</strong><span>OF <b>BISHU SUBEDI</b></span></div>
     </div>}
     <header className="nav wrap">
