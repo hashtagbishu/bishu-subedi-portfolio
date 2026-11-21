@@ -6,7 +6,8 @@ export const profile = {
   email: 'work.bishu@gmail.com',
   github: 'https://github.com/hashtagbishu',
   instagram: '',
-  linkedin: ''
+  linkedin: '',
+  photo: ''
 }
 export const projects = [
   {number:'01',name:'MySecond Teacher Assignment Helper - Extension',type:'CHROME EXTENSION',description:'A student-focused browser extension concept for keeping track of assignments and notifications.',tags:['JavaScript','Chrome Extensions'],tone:'purple',url:''},
