@@ -1,5 +1,5 @@
 import React from 'react'
-import {ArrowUpRight,Camera,BriefcaseBusiness,Mail,Code2,UserRound,Send,Instagram, Github} from 'lucide-react'
+import {ArrowUpRight,Camera,Mail,Code2,UserRound,Send} from 'lucide-react'
 import {profile,projects} from './data'
 
 const greetings = ['Hello','नमस्ते','Hola','Bonjour','こんにちは','안녕하세요','مرحبا','Ciao']
