@@ -5,9 +5,12 @@ export const profile = {
   intro: 'I enjoy exploring technology, building little projects and learning how good ideas become real experiences.',
   email: 'work.bishu@gmail.com',
   github: 'https://github.com/hashtagbishu',
-  instagram: '',
-  linkedin: '',
-  photo: ''
+  instagram: 'https://www.instagram.com/bishal.cfc/',
+  linkedin: 'https://www.linkedin.com/in/bishu-subedi-471190389/',
+  facebook: 'https://www.facebook.com/share/1DovcUJ1uR/',
+  discordHandle: 'armin.ftw',
+  freelancerHandle: '@BishuHere',
+  photo: '/bishu-photo.jpg'
 }
 export const projects = [
   {number:'01',name:'MySecond Teacher Assignment Helper - Extension',type:'CHROME EXTENSION',description:'A student-focused browser extension concept for keeping track of assignments and notifications.',tags:['JavaScript','Chrome Extensions'],tone:'purple',url:''},
