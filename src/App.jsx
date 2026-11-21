@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {ArrowUpRight,Camera,Mail,Code2,UserRound,Send,BriefcaseBusiness,Share2,MessageCircle} from 'lucide-react'
 import {profile,projects} from './data'
 
 const greetings = ['Hello','नमस्ते','Hola','Bonjour','こんにちは','안녕하세요','مرحبا','Ciao']
 
 export default function App(){
+  const [showIntro,setShowIntro] = useState(true)
+  useEffect(()=>{
+    const timer = window.setTimeout(()=>setShowIntro(false), 8000)
+    return ()=>window.clearTimeout(timer)
+  },[])
   const socials = [
     {name:'GitHub',url:profile.github,Icon:Code2},
     {name:'Instagram',url:profile.instagram,Icon:Camera},
@@ -25,6 +30,10 @@ export default function App(){
   }
 
   return <div className="site-shell">
+    {showIntro && <div className="intro-screen" aria-label="Welcome to the portfolio of Bishu Subedi">
+      <div className="intro-greeting-window"><div className="intro-greeting-track">{greetings.map(word=><span key={word}>{word}</span>)}</div></div>
+      <div className="intro-welcome"><span>WELCOME TO THE</span><strong>PORTFOLIO</strong><span>OF <b>BISHU SUBEDI</b></span></div>
+    </div>}
     <header className="nav wrap">
       <a className="brand" href="#top"><span className="brand-mark">b.</span><span>bishu<span className="muted">subedi</span></span></a>
       <nav><a href="#about">About</a><a href="#work">Projects</a><a href="#contact" className="nav-contact">Let's talk <ArrowUpRight size={14}/></a></nav>
