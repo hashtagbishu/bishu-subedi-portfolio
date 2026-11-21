@@ -1,5 +1,5 @@
 import React from 'react'
-import {ArrowUpRight,Camera,Mail,Code2,UserRound,Send} from 'lucide-react'
+import {ArrowUpRight,Camera,Mail,Code2,UserRound,Send,BriefcaseBusiness,Facebook,MessageCircle} from 'lucide-react'
 import {profile,projects} from './data'
 
 const greetings = ['Hello','नमस्ते','Hola','Bonjour','こんにちは','안녕하세요','مرحبا','Ciao']
@@ -9,6 +9,7 @@ export default function App(){
     {name:'GitHub',url:profile.github,Icon:Code2},
     {name:'Instagram',url:profile.instagram,Icon:Camera},
     {name:'LinkedIn',url:profile.linkedin,Icon:BriefcaseBusiness},
+    {name:'Facebook',url:profile.facebook,Icon:Facebook},
     {name:'Email',url:profile.email ? 'mailto:'+profile.email : '',Icon:Mail}
   ].filter(item=>item.url)
 
@@ -42,7 +43,7 @@ export default function App(){
         </div>
         <div className="portrait-wrap">
           <div className="portrait-frame">
-            {profile.photo ? <img className="portrait-image" src={profile.photo} alt="Portrait of Bishu Subedi"/> : <div className="portrait-placeholder"><div className="portrait-icon"><UserRound size={54}/></div><strong>YOUR PHOTO GOES HERE</strong><span>Add a portrait to src/data.js</span></div>}
+            {profile.photo ? <img className="portrait-image" src={profile.photo} alt="Portrait of Bishu Subedi"/> : <div className="portrait-placeholder"><div className="portrait-icon"><UserRound size={54}/></div><strong>YOUR PHOTO GOES HERE</strong><span>Portrait</span></div>}
             <span className="portrait-index">01 / ME</span>
           </div>
           <div className="portrait-note">STUDENT · BUILDER · DREAMER <span>✳</span></div>
@@ -63,7 +64,7 @@ export default function App(){
 
       <section className="social-section wrap section">
         <div><div className="section-kicker">03 / FIND ME AROUND THE WEB</div><h2>Let's be <em>social.</em></h2><p className="social-intro">Follow along, see what I'm building, or just drop by to say hello.</p></div>
-        <div className="social-links">{socials.map(({name,url,Icon})=><a key={name} href={url} target="_blank" rel="noreferrer"><span className="social-icon"><Icon size={20}/></span><span>{name}</span><ArrowUpRight size={16}/></a>)}</div>
+        <div><div className="social-links">{socials.map(({name,url,Icon})=><a key={name} href={url} target="_blank" rel="noreferrer"><span className="social-icon"><Icon size={20}/></span><span>{name}</span><ArrowUpRight size={16}/></a>)}</div><p className="social-intro">Discord: {profile.discordHandle} · Freelancer: {profile.freelancerHandle}</p></div>
       </section>
 
       <section className="contact wrap section" id="contact">
