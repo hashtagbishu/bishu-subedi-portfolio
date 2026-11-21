@@ -1,5 +1,5 @@
 import React from 'react'
-import {ArrowUpRight,Camera,Mail,Code2,UserRound,Send,BriefcaseBusiness,Facebook,MessageCircle} from 'lucide-react'
+import {ArrowUpRight,Camera,Mail,Code2,UserRound,Send,BriefcaseBusiness,Share2,MessageCircle} from 'lucide-react'
 import {profile,projects} from './data'
 
 const greetings = ['Hello','नमस्ते','Hola','Bonjour','こんにちは','안녕하세요','مرحبا','Ciao']
@@ -9,7 +9,7 @@ export default function App(){
     {name:'GitHub',url:profile.github,Icon:Code2},
     {name:'Instagram',url:profile.instagram,Icon:Camera},
     {name:'LinkedIn',url:profile.linkedin,Icon:BriefcaseBusiness},
-    {name:'Facebook',url:profile.facebook,Icon:Facebook},
+    {name:'Facebook',url:profile.facebook,Icon:Share2},
     {name:'Email',url:profile.email ? 'mailto:'+profile.email : '',Icon:Mail}
   ].filter(item=>item.url)
 
