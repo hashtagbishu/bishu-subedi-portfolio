@@ -64,7 +64,7 @@ export default function App(){
 
       <section className="social-section wrap section">
         <div><div className="section-kicker">03 / FIND ME AROUND THE WEB</div><h2>Let's be <em>social.</em></h2><p className="social-intro">Follow along, see what I'm building, or just drop by to say hello.</p></div>
-        <div><div className="social-links">{socials.map(({name,url,Icon})=><a key={name} href={url} target="_blank" rel="noreferrer"><span className="social-icon"><Icon size={20}/></span><span>{name}</span><ArrowUpRight size={16}/></a>)}</div><p className="social-intro">Discord: {profile.discordHandle} · Freelancer: {profile.freelancerHandle}</p></div>
+        <div><div className="social-links">{socials.map(({name,url,Icon})=><a key={name} href={url} target="_blank" rel="noreferrer"><span className="social-icon"><Icon size={20}/></span><span>{name}</span><ArrowUpRight size={16}/></a>)}</div><p className="social-intro">Discord: {profile.discordHandle} · <a href={profile.freelancer} target="_blank" rel="noreferrer">Freelancer: {profile.freelancerHandle} ↗</a></p></div>
       </section>
 
       <section className="contact wrap section" id="contact">
