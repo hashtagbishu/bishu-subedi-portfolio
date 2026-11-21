@@ -10,6 +10,7 @@ export const profile = {
   facebook: 'https://www.facebook.com/share/1DovcUJ1uR/',
   discordHandle: 'armin.ftw',
   freelancerHandle: '@BishuHere',
+  freelancer: 'https://www.freelancer.com/u/BishuHere',
   photo: '/bishu-photo.jpg'
 }
 export const projects = [
